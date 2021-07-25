@@ -10,7 +10,7 @@ import styles from '../styles/pages/Home.module.css';
 import { CountdownProvider } from '../contexts/CountdownContext';
 
 
-export default function Home() {
+export default function Home(props) {
     return (
         <div className={styles.container}>
             <Head>
@@ -34,3 +34,17 @@ export default function Home() {
         </div>
     )
 }
+
+export const getServerSideProps = async () => {
+    // chamada api
+    const user = {
+        level: 1,
+        // cu
+    }
+
+    
+    
+    return {
+        props: user
+    }
+} 
